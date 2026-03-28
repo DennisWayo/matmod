@@ -1,0 +1,11 @@
+base_config: base_dft_quick.yaml
+
+metadata:
+  system: hybrid_interface_quick
+
+interface:
+  fragment_variants: [ybtm]
+  default_fragment_variant: ybtm
+  placement_options: [n_rich, defect_adjacent]
+  separation_values: [2.8]
+  vacuum: 14.0

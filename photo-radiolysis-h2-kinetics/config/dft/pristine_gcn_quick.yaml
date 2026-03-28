@@ -1,0 +1,15 @@
+base_config: base_dft_quick.yaml
+
+metadata:
+  system: pristine_gcn
+
+structure:
+  repeat: [2, 2, 1]
+  graphene_a: 2.48
+  nitrogen_fraction: 0.57
+  defect_type: none
+  vacuum: 14.0
+  preview_path: data/dft/structures/pristine_gcn_quick_preview.xyz
+
+adsorption:
+  use_surface_model: pristine

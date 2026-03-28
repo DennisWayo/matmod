@@ -1,0 +1,10 @@
+matplotlib:
+  figure.figsize: [7.2, 4.6]
+  axes.grid: true
+  grid.alpha: 0.25
+  axes.titlesize: 12
+  axes.labelsize: 11
+  font.size: 10
+  font.family: DejaVu Serif
+  legend.frameon: false
+  savefig.dpi: 300

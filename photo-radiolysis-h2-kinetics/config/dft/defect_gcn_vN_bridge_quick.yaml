@@ -1,0 +1,15 @@
+base_config: base_dft_quick.yaml
+
+metadata:
+  system: gcn_vN_bridge
+
+structure:
+  repeat: [2, 2, 1]
+  graphene_a: 2.48
+  nitrogen_fraction: 0.57
+  defect_type: vN_bridge
+  vacuum: 14.0
+  preview_path: data/dft/structures/defects/gcn_vN_bridge_quick_preview.xyz
+
+adsorption:
+  use_surface_model: gcn_vN_bridge

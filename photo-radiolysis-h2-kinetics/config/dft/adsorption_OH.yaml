@@ -1,0 +1,19 @@
+base_config: base_dft.yaml
+
+metadata:
+  adsorption_case: OH
+
+adsorption:
+  adsorbate: OH
+  use_surface_model: pristine
+  run_prefix: adsorption
+  candidate_sites:
+    - name: n_rich
+      site_type: n_rich
+      height: 2.5
+    - name: ring_center
+      site_type: ring_center
+      height: 2.8
+    - name: bridge
+      site_type: bridge
+      height: 2.6

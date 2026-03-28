@@ -29,3 +29,27 @@ env/
 build/
 dist/
 *.egg-info/
+
+# Local project briefs
+qml-undergrad-project.docx.pdf
+
+# Local scratch/unrelated files
+undergrads/lucas/
+zno-co2-lucas.ipynb
+zno-co2-lucas.tex
+
+# photo-radiolysis-h2-kinetics: local env/cache/build outputs
+photo-radiolysis-h2-kinetics/.venv/
+photo-radiolysis-h2-kinetics/.venv312/
+photo-radiolysis-h2-kinetics/.pytest_cache/
+photo-radiolysis-h2-kinetics/.matplotlib/
+photo-radiolysis-h2-kinetics/**/__pycache__/
+photo-radiolysis-h2-kinetics/.coverage
+photo-radiolysis-h2-kinetics/coverage.xml
+
+# photo-radiolysis-h2-kinetics: generated data/figures (regenerate via scripts)
+photo-radiolysis-h2-kinetics/data/outputs/
+photo-radiolysis-h2-kinetics/data/dft/calculations/
+photo-radiolysis-h2-kinetics/data/dft/structures/
+photo-radiolysis-h2-kinetics/data/dft/results/
+photo-radiolysis-h2-kinetics/data/dft/summary/

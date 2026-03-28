@@ -1,0 +1,69 @@
+one_dimensional:
+  light_intensity: [0.3, 0.6, 1.0, 1.4, 1.8]
+  dose_rate: [0.3, 0.6, 1.0, 1.4, 1.8]
+  catalyst_loading: [0.4, 0.7, 1.0, 1.3, 1.6]
+  scav_initial: [0.05, 0.15, 0.35, 0.6, 0.9]
+  k_rec: [0.02, 0.05, 0.08, 0.12, 0.18]
+  k_eaq_to_ecb: [0.0, 0.01, 0.03, 0.06, 0.1]
+  alpha_sep: [0.0, 0.3, 0.8, 1.5, 2.5]
+
+two_dimensional:
+  light_intensity: [0.3, 0.6, 1.0, 1.4, 1.8]
+  dose_rate: [0.3, 0.6, 1.0, 1.4, 1.8]
+
+preset_scenarios:
+  inhibitory: config/inhibitory_regime.yaml
+  neutral: config/neutral_regime.yaml
+  positive: config/positive_regime.yaml
+  defect_informed: config/defect_informed_regime.yaml
+
+sensitivity:
+  parameters:
+    - dose_rate
+    - light_intensity
+    - catalyst_loading
+    - radiolysis_scale
+    - k_photo_gen
+    - k_rec
+    - k_eaq_hvb
+    - k_eaq_to_ecb
+    - k_hvb_scav
+    - k_hvb_hr
+    - alpha_sep
+    - K_site
+    - k_oh_ads_eff
+    - k_oh_des_eff
+    - k_oh_clear_eff
+    - lambda_photo_block
+    - alpha_H_defect
+    - alpha_CT_defect
+    - alpha_OH_penalty
+  perturbation_fraction: 0.1
+
+search:
+  light_values: [0.6, 1.0, 1.4, 1.8]
+  dose_values: [0.2, 0.4, 0.8, 1.2]
+  enable_eaq_assisted_separation: true
+  gamma_eaq_sep_fixed: 42.0
+  k_rec: [0.05, 0.9]
+  k_eaq_hvb: [0.001, 0.06]
+  k_eaq_to_ecb: [0.0, 0.12]
+  k_hvb_scav: [0.005, 0.12]
+  k_hvb_hr: [0.0, 0.12]
+  radiolysis_scale: [0.1, 0.6]
+  alpha_sep: [0.2, 2.5]
+  K_site: [0.8, 1.8]
+
+defect_informed_search:
+  light_values: [0.7, 1.0, 1.3, 1.6]
+  dose_values: [0.2, 0.4, 0.7, 1.0]
+  k_eaq_to_ecb: [0.008, 0.08]
+  alpha_sep: [0.4, 2.0]
+  k_oh_ads_eff: [0.015, 0.11]
+  k_oh_des_eff: [0.004, 0.05]
+  k_oh_clear_eff: [0.01, 0.12]
+  lambda_photo_block: [0.05, 0.75]
+  alpha_H_defect: [0.1, 0.9]
+  alpha_CT_defect: [0.1, 0.9]
+  alpha_OH_penalty: [0.1, 1.2]
+  radiolysis_scale: [0.1, 0.5]

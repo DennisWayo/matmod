@@ -1,0 +1,64 @@
+backend: gpaw
+xc: PBE
+mode: lcao
+basis: dzp
+kpts: [2, 2, 1]
+gamma_only: false
+vacuum: 15.0
+optimizer: BFGS
+fmax: 0.08
+max_steps: 120
+spin_polarized: false
+charge: 0.0
+restart: false
+allow_mock_fallback: true
+
+output_paths:
+  structures: data/dft/structures
+  calculations: data/dft/calculations
+  results: data/dft/results
+  summary: data/dft/results/summary
+
+structure:
+  repeat: [4, 4, 1]
+  graphene_a: 2.48
+  nitrogen_fraction: 0.56
+  vacuum: 15.0
+
+interface:
+  fragment_variants: [undoped, yb, ybtm]
+  default_fragment_variant: ybtm
+  placement_options: [n_rich, ring_center, bridge, defect_adjacent]
+  separation_values: [2.4, 2.8, 3.2]
+  vacuum: 14.0
+
+adsorption:
+  use_surface_model: pristine
+  candidate_sites:
+    - name: n_rich
+      site_type: n_rich
+      height: 2.5
+    - name: ring_center
+      site_type: ring_center
+      height: 2.8
+    - name: bridge
+      site_type: bridge
+      height: 2.6
+
+electronic:
+  dos_points: 500
+  dos_width: 0.15
+  compute_charge_density_difference: true
+
+references:
+  adsorbate_energies:
+    H: -1.0
+    OH: -10.0
+    H2O: -14.2
+    H2: -6.7
+
+metadata:
+  positioning: >
+    NaYF4:Yb3+/Tm3+ is treated as a rare-earth photonic modifier and
+    interfacial partner. g-C3N4 is treated as the catalytic surface.
+    Radiolysis is intentionally excluded at this DFT stage.
