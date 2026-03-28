@@ -19,6 +19,7 @@ coverage.xml
 
 # Virtual environments
 .venv/
+.venv*/
 venv/
 env/
 
@@ -34,12 +35,22 @@ dist/
 qml-undergrad-project.docx.pdf
 
 # Local scratch/unrelated files
-undergrads/lucas/
 zno-co2-lucas.tex
+
+# Lucas local runtime artifacts
+undergrads/lucas/__pycache__/
+undergrads/lucas/results/jobs/*.pid
+undergrads/lucas/*.executed.ipynb
+
+# qml-co2-splitting-mo: generated/runtime outputs
+qml-co2-splitting-mo/__pycache__/
+qml-co2-splitting-mo/data/geometries/
+qml-co2-splitting-mo/results/
 
 # photo-radiolysis-h2-kinetics: local env/cache/build outputs
 photo-radiolysis-h2-kinetics/.venv/
 photo-radiolysis-h2-kinetics/.venv312/
+photo-radiolysis-h2-kinetics/.venv312
 photo-radiolysis-h2-kinetics/.pytest_cache/
 photo-radiolysis-h2-kinetics/.matplotlib/
 photo-radiolysis-h2-kinetics/**/__pycache__/
